@@ -18,7 +18,7 @@ export function getIncreaseForOrigin(origin, quotation) {
     let increase = 0;
 
     if (origin === "imported") {
-        increase = quotation * 1.25;
+        increase = (quotation / 100) * 25;
     }
 
     return increase;
@@ -28,7 +28,7 @@ export function getIncreaseForCoverage(coverage, quotation) {
     let increase = 0;
 
     if (coverage === "complete") {
-        increase = quotation  * 1.35;
+        increase = (quotation / 100) * 35;
     }
 
     return increase;

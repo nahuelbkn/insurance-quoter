@@ -19,9 +19,9 @@ const HeaderContainer = styled.header`
     color: white;
     border-radius: 20px 20px 0 0;
     
-    @media screen and (max-width:375px) {
-        margin-left: 20px;
-        margin-right: 20px;
+    @media screen and (max-width: 600px) {
+        margin-left: 2%;
+        margin-right: 2%;
     }
 `;
 

@@ -11,6 +11,7 @@ import {
 
 
 
+
 function App() {
 
   /* STATES and necessary destructuings -------------------------------------------------- */
@@ -24,9 +25,10 @@ function App() {
   }
 
   // States
-  const [report, updateReport] = useState(null); 
   const [data, updateData] = useState(initialData);
-  
+  const [report, updateReport] = useState(null); 
+  const [recharge, updateRecharge] = useState(false)
+
 
   // Destructurings
   const { origin, year, coverage } = data;
@@ -45,6 +47,10 @@ function App() {
     }
   }, [data]);
 
+  useEffect(() => {
+    updateRecharge(true);
+  }, [report])
+
   
 
 
@@ -59,7 +65,7 @@ function App() {
           <>
             <Header title="Informe de la cotización" />
             <Container>
-             <Report report={report} />
+              <Report report={report} recharge={recharge} updateRecharge={updateRecharge} />
             </Container>
           </>
         )
@@ -86,9 +92,9 @@ const Container = styled.div`
   transition: all 1s ease;
   margin-bottom: 40px;
 
-  @media screen and (max-width:375px) {
-    margin-left: 20px;
-    margin-right: 20px;
+  @media screen and (max-width: 600px) {
+    margin-left: 2%;
+    margin-right: 2%;
     padding: 30px;
   }
 `;
