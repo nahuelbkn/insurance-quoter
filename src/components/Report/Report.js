@@ -9,12 +9,9 @@ const Report = ({ report, recharge, updateRecharge }) => {
     const { quotation, queryData } = report;
     const { origin, year, coverage } = queryData;
 
-    setTimeout(()=>{
-        console.log("shot updateRecharge")
-        updateRecharge(false);
-    }, 1500);
+    setTimeout(()=>{ updateRecharge(false) }, 2300);
 
- 
+    
     return (
         recharge ? <Spinner /> : (
             <List>
