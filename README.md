@@ -27,3 +27,4 @@ If full coverage is chosen, an increase of 35% is made (on the base value).
     - Hooks
     - Styled Components
     - PropTypes
+    - Responsive Web Design
