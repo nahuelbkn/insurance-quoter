@@ -26,7 +26,6 @@ const Report = ({ report, recharge, updateRecharge }) => {
                 </ListItem>
                 <ListItem>
                     <Label>Cobertura:</Label>
-                    
                     {coverage}
                 </ListItem>
                 <ListItemResult>
@@ -41,11 +40,12 @@ const Report = ({ report, recharge, updateRecharge }) => {
 const List = styled.ul`
     list-style: none;
     padding: 0;
+    padding-left: 35px;
     margin: none;
-    margin-left: 160px;
     font-size: 1.2rem;
 
     @media screen and (max-width: 600px) {
+        padding: 0;
         margin: 0;
         margin-left: 14px;
     }
@@ -53,10 +53,17 @@ const List = styled.ul`
 
 const ListItem = styled.li`
     padding: .3rem;
+    padding-left: 1.2rem;
     text-align: left;
+    max-width: 212px;
+
+    @media screen and (max-width: 600px) {
+        padding-left: 1.4rem;
+    }
 `;
 
 const ListItemResult = styled.li`
+    margin: 0;
     max-width: 212px;
     margin-top: 1rem;
     font-size: 1.4rem;

@@ -56,18 +56,20 @@ function App() {
 
   return (
     <AppContainer>
-      <Header title="Cotizador de seguros vehiculares" />
-      <Container>
-        <MainForm updateDataApp={updateData}/>
-      </Container>
+      <SectionCantainer>
+        <Header title="Cotizador de seguros vehiculares" />
+        <Container>
+          <MainForm updateDataApp={updateData}/>
+        </Container>
+      </SectionCantainer>
       {
         report && (
-          <>
+          <SectionCantainer>
             <Header title="Informe de la cotización" />
             <Container>
               <Report report={report} recharge={recharge} updateRecharge={updateRecharge} />
             </Container>
-          </>
+          </SectionCantainer>
         )
       }
     </AppContainer>
@@ -75,14 +77,22 @@ function App() {
 }
 
 const AppContainer = styled.div`
-  max-width: 600px;
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 1050px;
   margin: auto;
   margin-top: 70px;
 
   @media screen and (max-width:375px) {
+    display: block;
     margin-left: 20px;
     margin-right: 20px;
   }
+`;
+
+const SectionCantainer = styled.div`
+  display: block;
+  max-width: 600px;
 `;
 
 const Container = styled.div`
