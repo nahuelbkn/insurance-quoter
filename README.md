@@ -1,5 +1,7 @@
 # Insurance Quoter
 
+### Demo: https://insurance-quoter-nahuelbkn.netlify.app/
+
 #### This website simulates the calculation of the price of a vehicle insurance based on three data, the origin of the vehicle (national or imported manufacture), the year of manufacture and the type of coverage desired (basic or complete).
 
 Values are fictitious and, starting at a base of $2000, vary as follows:
@@ -13,7 +15,6 @@ If the vehicle is national, a 3% discount is made (on the base value) for each y
 #### Coverage:
 If full coverage is chosen, an increase of 35% is made (on the base value).
 
-### Demo: https://insurance-quoter-nahuelbkn.netlify.app/
 
 ## Built With
 
