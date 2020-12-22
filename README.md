@@ -18,11 +18,11 @@ If full coverage is chosen, an increase of 35% is made (on the base value).
 ## Built With
 
     - React
-    - Hooks
     - HTML
     - CSS
   	- JavaScript
     
 ## It was also used:
+    - Hooks
     - Styled Components
     - PropTypes
